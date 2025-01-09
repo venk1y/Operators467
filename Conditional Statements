@@ -1,0 +1,74 @@
+Conditional Statements:are used to make the set of instrctions(block of code)(conditional block) execute only when the given condition is true
+>>They are used to decide whether the code has to be executed or skip based on the given condition
+>>execute in a sequence line by line
+
+
+Block of Code:Set of instructions
+>It will execute only when that specific condition is true
+
+
+Condition:An expression that evaluates an result(True or False) 
+Eg:console.log(5>6)
+
+Methods:
+
+1)if: only one possible condition;if the condition is true it will execute otherwise it will skip
+
+Syntax:
+       if(condition){
+      block of code
+}
+
+Ex:
+    let a=4
+    let b=5
+    if(a<b){
+        document.write("hello venky","<br>")
+    }
+    document.write("brilliant puli")
+
+Output:hello venky
+brilliant puli
+
+
+
+2)if-else
+
+Example:
+        let a=4
+    let b=5
+    if(a>b){
+     document.write("hello venky","<br>")
+    }else{
+        document.write("hi Reddy","<br>")
+    }
+    document.write("brilliant puli","<br>")
+
+Output:hi Reddy
+brilliant puli
+
+
+3)else if:
+     Example:let age =prompt("Enter Your Age?")
+let name=prompt("Enter your name?")
+if(age<18){
+    alert(name+"You are too young to marry")
+}else if(age>35){
+    alert(name+"You are too old to marry")
+}else{
+    alert(name+"Perfect age to marry")
+}
+alert("Welcome to My world")
+
+Output:Venky ReddyPerfect age to marry
+
+
+
+4)switch
+5)Ternary operator
+
+
+
+
+
+

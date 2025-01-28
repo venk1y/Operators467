@@ -1,0 +1,159 @@
+DOM (Document Object Model)
+
+--It is a programming interface in the web development that allows us to interact and manipulate(change) with the html documents.
+---When the webpage is loaded the browser will create the DOM of the web page
+
+When an html file is loaded into the browser, the java script cannot understand the html document directly
+
+DOM: is basically the representation of same html document but in the  tree-like structure composed of objects
+
+Html Dom allows JavaScript to access(to get) and modify the elements in the Html document
+
+Key points:
+1)Structure: The DOM represents the structure of Html document as tree; each node in a tree represents the element ,an attribute, text
+2)Manipulation: using js,you can interact with elements(buttons) we can modify, add ,remove the elements
+3)Event Handling
+4)W3C-World Wide Web Consortium
+
+<html>
+<head>
+<title> college </college>
+</head>
+<body>
+<h1 iam in hyd </h1>
+
+
+</body>
+
+</html>
+
+-- in DOM all the elements are defined objects
+property: is a value that you can set to the objects(like changing content of an html element)
+Method: an action
+(I like add or delete)
+
+Methods of DOM:
+getting element
+1)getting an element by id
+2)getting an element by class
+3)getting an element by tag name
+4)getting an element by query selector
+
+<style>
+    h1.b {
+color: blue;
+font-size: 2em;
+}
+
+h1.a {
+color: red;
+font-size: 1.5em;
+}
+
+h1.c {
+color: green;
+font-size: 1.8em;
+}
+
+    
+  </style>
+</head>
+<body>
+    <h1 class="b"> mallesh</h1>
+    <h1 class="a"> Venkat</h1>
+    <h1 class="c">ramya</h1>
+    <h1 class=" b"> krishna</h1>
+    <h1 class="a"> gani</h1>
+    <h1 class="c"> ravi </h1>
+</body>
+
+Output:mallesh
+venkat
+ramya
+krishna
+gani
+ravi
+
+
+<h1 class="a">Mallikarjunarao</h1>
+<h1 class="b">gopi</h1>
+<h1 class="c">ganesh</h1>
+<h1 class="d">nani</h1>
+<h1 class="e">yash</h1>
+<h1 class="f">raviteja</h1>
+<h1 class="g">venky</h1>
+<h1 class="h">narendra</h1>
+<h1 class="i">anwar</h1>
+<h1 class="j">chandra</h1>
+<h1 class="k">sravan</h1>
+<style>
+.a{
+    color: green;
+    text-align: center;
+
+}
+.b{
+    color: red;
+    text-align: center;
+    
+}
+.c{
+    color: black;
+    text-align: center;
+    
+}
+.d{
+    color: blue;
+    text-align: center;
+    
+}
+.e{
+    color: navy;
+    text-align: center;
+    
+}
+.f{
+    color: yellow;
+    text-align: center;
+    
+}
+.g{
+    color: orange;
+    text-align: center;
+    
+}
+.h{
+    color: green;
+    text-align: center;
+    
+}
+.i{
+    color: red;
+    text-align: center;
+    
+}
+.j{
+    color: aqua;
+    text-align: center;
+    
+}
+.k{
+    color: violet;
+    text-align: center;
+    
+}
+
+</style>
+
+Output:
+Mallikarjunarao
+gopi
+ganesh
+nani
+yash
+raviteja
+venky
+narendra
+anwar
+chandra
+sravan

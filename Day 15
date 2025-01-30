@@ -1,0 +1,56 @@
+How to remove child elements from a parent node
+removechild() - to remove the elements
+
+ex:
+<h1 id=b>i am gani</h1>
+    <h2 class="a">sai</h2>
+    <h3 class="b">ravi</h3>
+    <ul>
+    <li>Ganesh</li>
+    <li>Ravi</li>
+    <li>sam</li>
+    </ul>
+<script>
+    const ul = document.querySelector('ul');
+    const lists = document.querySelectorAll('li');
+    console.log(ul)
+    console.log(lists)
+    for (const list of lists){
+        console.log('removing: ${list.textContent}')
+        ul.removeChild(list)
+        console.log(lists)
+        console.log(list)
+    }
+
+
+Output:i am gani
+sai
+ravi
+
+
+<div id="a">
+        <h1>RAVITEJA</h1>
+        <h1>GANESH</h1>
+    </div>
+    <div id="b">
+        <h1>YASH</h1>
+        <h1>GOPI</h1>
+        <h1>NANI</h1>
+        
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="MALLI"
+        let p=document.getElementById('b')
+        p.appendChild(n)
+        document.write(p.innerText)
+</script>
+
+
+Output:RAVITEJA
+GANESH
+YASH
+GOPI
+NANI
+MALLI
+YASH GOPI NANI MALLI

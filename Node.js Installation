@@ -1,0 +1,10 @@
+To install React js:
+1)Download Node jS;
+
+
+command prompt:
+node -v
+npm -v
+npx create-react-app my app
+cd my-app
+npm start

@@ -1,0 +1,44 @@
+Public index.html:
+The main html file that serves as an entry point for the app.
+scr/index.js:The js entry point for the react app where the DOM is rendered
+scr/components:A folder to store reusable components.
+
+1)components: core building blocks of a react application
+--The help to create reusable block of code
+import React from 'react';
+
+const Welcome=(props)=>{
+    const{name, greeting}=props
+    return(
+        <h1 className='message'>
+            {greeting},{name}
+        </h1>
+    )
+}
+export default Welcome;
+
+
+import React from 'react'
+import './App.css'
+import Welcome from'./Welcome'
+
+const App=()=>{
+  return(
+    <div style={{textAlign:'center',color:'red'}}> 
+    <Welcome name="ciru" greeting="hello"/>
+  </div>
+  )
+}
+
+// const  Welcome=()=><h1 className="message"> hello ravi</h1>
+
+// function App() {
+//   return(
+//     <div className='App'>
+//       <Welcome/>
+//     </div>
+//   );
+  
+// }
+ export default App;
+

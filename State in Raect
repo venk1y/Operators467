@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+            transition: background-color 0.5s ease-in-out;
+            font-family: Arial, sans-serif;
+        }
+
+        .bulb-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .light-bulb {
+            width: 100px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .button {
+            font-size: 20px;
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="bulb-container">
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb1" alt="Light Bulb">
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb2" alt="Light Bulb">
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb3" alt="Light Bulb">
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb4" alt="Light Bulb">
+    </div>
+    <button class="button" id="toggleButton" onclick="Togglelight()">Turn ON</button>
+
+    <script>
+        let isOn = false;
+
+        function Togglelight() {
+            const body = document.getElementById("body");
+            const bulbs = document.querySelectorAll('.light-bulb');
+            const toggleButton = document.getElementById('toggleButton');
+
+            isOn = !isOn;
+
+            if (isOn) {
+                body.style.backgroundColor = "skyblue";
+                toggleButton.innerText = "Turn OFF";
+                bulbs.forEach((bulb, index) => {
+                    bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                    bulb.style.transform = `translateY(${index % 2 === 0 ? '-10px' : '10px'})`;
+                });
+            } else {
+                body.style.backgroundColor = "black";
+                toggleButton.innerText = "Turn ON";
+                bulbs.forEach(bulb => {
+                    bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                    bulb.style.transform = "translateY(0px)";
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+state:
+
+State in react:
+in react,state is a like a container that holds the data or information for a component
+
+Syntax:
+const[statevariable,setstatefunction]=useState(initial value)
+1)stateVariable:holds the current state(ex:name,colour)
+2)setStatefunction:used to update the state function
+3)initial value:The initial value of the state variable when the component first renders
